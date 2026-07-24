@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-Setup Stats Bot — alpha-evidence engine for professional market screening.
+Apex Tool v15 - statistical market analysis and alpha-evidence engine.
 
-This file is a standalone, backward-compatible fork of tv_predict2.py. It keeps
-the existing TradingView/Google News forecast flow, then adds the commercial
-value layer needed by investors and finance teams: walk-forward alpha evidence,
-benchmark comparisons, calibrated confidence, data-quality audit trails,
-decision-ready outputs, portfolio ranking and per-signal proof cards.
+This is the canonical research engine used by dashboard.live.prices.py. It
+combines multi-source market-data validation, versioned feature engineering,
+walk-forward evaluation, benchmark comparisons, probabilistic calibration,
+risk metrics, portfolio ranking and auditable per-signal evidence.
 
-Important: outputs are statistical research signals, not personalised financial
-advice or trade instructions.
+Important: outputs are model-generated statistical research and decision-support
+analytics. They are not personalised investment advice, regulated investment
+research, trade-execution instructions or guarantees of future performance.
 """
 from __future__ import annotations
 
@@ -2279,7 +2279,7 @@ def run_watchlist(
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Setup Stats Bot: alpha-evidence market setup engine with JSON output")
+    p = argparse.ArgumentParser(description="Apex Tool v15: professional alpha-evidence and market setup engine with JSON output")
     p.add_argument("--days", type=int, default=DEFAULT_DAYS, help="Forecast horizon in trading days, default 5")
     p.add_argument("--only", nargs="+", metavar="LABEL", help="Ticker labels to process")
     p.add_argument("--mode", choices=["fast", "balanced", "deep"], default="balanced", help="Data depth preset")
