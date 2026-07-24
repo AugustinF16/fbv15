@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Chrome finance dashboard for setup.stats.py.
 
-Run: python tv_dashboard.py
-Then open http://127.0.0.1:8844
+Run: python "dashboard.live.prices.py"
+Then open http://127.0.0.1:8845
 """
 from __future__ import annotations
 
@@ -9424,7 +9424,7 @@ class Handler(BaseHTTPRequestHandler):
             return
         if self.path == "/api/run":
             if not PREDICT_SCRIPT.exists():
-                self.json({"error": "tv_predict2.py not found next to tv_dashboard.py"}, 500)
+                self.json({"error": "setup.stats.py not found next to dashboard.live.prices.py"}, 500)
                 return
             job = start_job(payload)
             self.json({"id": job.id})
